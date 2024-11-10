@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Resolución de módulos y configuración para Vite */
+    "moduleResolution": "node",           // Cambiado de "bundler" a "node"
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Habilitar la interoperabilidad con módulos comunes */
+    "esModuleInterop": true,              // Habilitar esModuleInterop
+    "allowSyntheticDefaultImports": true, // Permite importar módulos comunes como si fueran default
+
+    /* Path Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
